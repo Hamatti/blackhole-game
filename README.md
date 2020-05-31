@@ -6,6 +6,8 @@ This is a digital version of a physical two-player game where both players place
 
 Black hole then sucks in all the numbers touching it and the player with less points sucked in will win.
 
+Current version of this game is a turn-based game to be played on the same computer.
+
 Black Hole is originally [a game for two players by Wal Joris](https://nestorgames.com/#blackhole_detail).
 
 ## Developer Notes
