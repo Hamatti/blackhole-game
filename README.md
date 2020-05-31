@@ -4,6 +4,8 @@ This is a digital version of a physical two-player game where both players place
 
 Black hole then sucks in all the numbers touching it and the player with less points sucked in will win.
 
+Black Hole is originally [a game for two players by Wal Joris](https://nestorgames.com/#blackhole_detail).
+
 ## Setup stuff from CRA
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
