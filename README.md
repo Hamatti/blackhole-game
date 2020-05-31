@@ -2,6 +2,8 @@
 
 ![Screenshot of the game](public/screenshot.png)
 
+[Demo available at the-blackhole-game.netlify.app](https://the-blackhole-game.netlify.app/)
+
 This is a digital version of a physical two-player game where both players place numbers 1 through 10 turn after turn on a pyramid-shaped field with 21 spots. At the end of the game, there's one empty slot - the black hole.
 
 Black hole then sucks in all the numbers touching it and the player with less points sucked in will win.
