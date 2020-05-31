@@ -1,9 +1,4 @@
-import React, { useState } from "react";
-
-const COLOR = {
-  RED: "red",
-  BLUE: "blue",
-};
+import React from "react";
 
 const WIDTH = 50;
 const HEIGHT = 50;
@@ -33,9 +28,9 @@ const Slot = ({ slot, onClick, gameStatus }) => {
   const [left, top] = calculatePosition(idx);
 
   const style = {
+    ...baseStyle,
     top: `${top}px`,
     left: `${left}px`,
-    ...baseStyle,
     backgroundColor:
       state === "unselected" && gameStatus === "ongoing"
         ? "white"
