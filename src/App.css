@@ -35,3 +35,10 @@ footer {
   clear: both;
   position: relative;
 }
+
+.gameboard {
+  position: relative;
+  height: 300px;
+  width: 300px;
+  margin: auto;
+}

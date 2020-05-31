@@ -1,4 +1,5 @@
 import React from "react";
+import { GAMESTATE, SLOTSTATE } from "./constants";
 
 const WIDTH = 50;
 const HEIGHT = 50;
@@ -20,11 +21,13 @@ const calculatePosition = (idx) => {
 };
 
 const Slot = ({ slot, onClick, gameStatus }) => {
-  if (gameStatus === "finished" || slot.state !== "unselected") {
+  if (
+    gameStatus === GAMESTATE.FINISHED ||
+    slot.state !== SLOTSTATE.UNSELECTED
+  ) {
     onClick = () => {};
   }
   const { idx, state, number, color, highlight } = slot;
-
   const [left, top] = calculatePosition(idx);
 
   const style = {
@@ -32,17 +35,24 @@ const Slot = ({ slot, onClick, gameStatus }) => {
     top: `${top}px`,
     left: `${left}px`,
     backgroundColor:
-      state === "unselected" && gameStatus === "ongoing"
+      state === SLOTSTATE.UNSELECTED && gameStatus === GAMESTATE.ONGOING
         ? "white"
-        : state === "unselected" && gameStatus === "finished"
+        : state === SLOTSTATE.UNSELECTED && gameStatus === GAMESTATE.FINISHED
         ? "black"
         : color,
     border: `${highlight ? 8 : 1}px solid black`,
   };
 
   return (
-    <button className="slot" style={style} onClick={() => onClick(slot)}>
-      {state === "unselected" ? "" : number}
+    <button
+      disabled={
+        state !== SLOTSTATE.UNSELECTED || gameStatus === GAMESTATE.FINISHED
+      }
+      className="slot"
+      style={style}
+      onClick={() => onClick(slot)}
+    >
+      {state === SLOTSTATE.UNSELECTED ? "" : number}
     </button>
   );
 };
