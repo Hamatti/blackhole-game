@@ -34,7 +34,7 @@ function App() {
           </a>{" "}
           and{" "}
           <a
-            href="https://github.com/hamatti/"
+            href="https://github.com/Hamatti/blackhole-game"
             target="_blank"
             rel="noopener noreferrer"
           >
